@@ -140,15 +140,67 @@ def any_(a,b):
     print(a)
     print(b)
 any_(23,34)
+--------------
+--passing by reference----
+
+ex:
+
+def any_(num,num_2):
+    print(num)
+    print(num_2)
+any_(num = 8 , num_2 = 9)
+--------------
+
+Anonymous function
+------------------
+--->anonymous function is a function that dont any name
+-->this also called as lamda
+--->lamda function will take n number arguments but only one expression
+sytax;
+lamda arguments : expresssion
+
+ex:
+so = lambda a,b,c,d : a+b+c+d
+print(so(2,3,4,5))
+1.map()
+-->the map func will be applied on the given func of each and every element of an itterable
+ex:
+nums = [1,2,3,5,4,7]
+so = list(map(lambda x: x*x,nums))
+print(so)
+
+output:
+
+[1, 4, 9, 25, 16, 49]
+
+2.filter()
+--->filter () function we only consider if the condition is true then it will keep that values
+
+ex:
+
+nums = [1,2,3,5,4,7]
+so = list(filter(lambda x: x%2==0,nums))
+print(so)
+
+output:
+[2,4]
+
+3.reduce
 
 
 
 
 '''
-def any_(num,num_2):
-    print(num)
-    print(num_2)
-any_(num = 8,num_2 = 9)
+from functools import reduce
+nums = [1,2,3,5,4,7]
+so = reduce(lambda x,y: x+y,nums)
+print(so)
+
+
+
+
+
+
 
 
 
