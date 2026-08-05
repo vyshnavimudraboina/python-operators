@@ -12,15 +12,169 @@ types of modules
 
 --
 1.math
-
+---> math module used to work on mathematical functionality
 ex
 
 import math
 print(math.sqrt(25))
+
+floor
+--->it will round down to the near value
+ex:
+--------------------
+lcm
+ex:
+
+import math
+print(math.lcm(24,36))
+
+square root
+
+----> it will get square value
+ex:
+
+import math
+print(math.sqrt(25))
+------------------------
+factorial
+---> it will give factorial value
+
+ex:
+
+import math
+print(math.factorial(5))
+--------------
+log
+--->
+import math
+print(math.log(2,3))
+print(math.cos(math.pi))
+print(math.pi)
+
+
+
 ------------------
-
-
 2.sys
+---> sys is used to get the details of python interperter
+
+i.version
+
+ex:
+import sys
+print(sys.version)
+-----------------------
+ii..py path  we will get by this func
+ex
+
+import sys
+print(sys.version)
+print(sys.path)
+----------------------
+iii.exit
+---> this function will exit from the program
+ex:
+
+import sys
+print(sys.exit())#there is no show output
+print(sys.platform)
+--------------
+vi.platform
+--->it will the python run platform
+ex:
+
+import sys
+print(sys.platform)
+------------------
+v argv
+----> it will give the current run path
+ex:
+
+import sys
+print(sys.argv)
+---------------------
+vi.datetime
+--->it will give the today time + time
+
+ex:
+
+from datetime import datetime
+print(datetime.now())
+print(d)
+
+ex:
+
+
+from datetime import datetime
+now = (datetime.now())
+print(now.strftime('%Y-%m-%d'))
+print(now.strftime('%A'))
+print(now.strftime('%B'))
+print(now.strftime('%h:%m:%s'))
+print(now.strftime('%y-%m-%d'))
+
+%y-->year
+%m-->month
+%d--->day
+%h--->hour
+%s---->second
+%A--->current date
+%B--->current month
+----------------------------
+vii.collections
+---> the collectyion module will provide container type data which is more powerful than build in data types
+
+ex:
+import collections
+data=['apple','banana','orange','banana','pineapple']
+print(collections.Counter(data))
+
+i.deque
+
+ex:
+
+from collections import deque
+data = deque([1,2,3])
+data.appendleft(7)
+print(data)
+----------------
+ii.pop
+
+ex:
+
+from collections import deque
+data = deque([1,2,3])
+data.pop()
+print(data)
+-------------------
+iii.namedtuple
+
+ex:
+
+from collections import namedtuple
+data = namedtuple(typename='stu',field_names=('name','age'))
+print(data('join','18'))
+
+-------------------
+itertools
+---------------
+
+i.count
+
+ex:
+
+from itertools import count
+c = count(100)
+for j in range(5):
+    print(next(c))
+
+ii.ex:
+
+import itertools
+
+for j in itertools.repeat(p_object('python',10)):
+    print(j)
+
+--------------------------------------
 3.os
 -------------------------------------
 4.rondm
@@ -28,9 +182,47 @@ ex:
 
 import random
 print(random.randint(a=1000,b=9999))
+---------
+i. randint
+--->used to generate random numbers based on the range
+ex:
 
+import random
+print(random.randint(a=1000,b=9999))
+---------------------
+choice
+-----
+---> it will the random value from the given data
 
+ex:
 
+import random
+color =['red','green','blue']
+print(random.choice(color))
+
+-------------------
+suffle
+
+---> it can shuffle the data randomly
+
+ex:
+
+import random
+color =['red','green','blue']
+print(random.choice(color))
+random.shuffle(color)
+print(color)
+--------------
+uniform
+
+---> will give the decimal in a range given
+
+ex:
+
+import random
+print(random.uniform(a=1,b=100))
+
+-------------------
 
 ---------------------
 2.user defined
@@ -86,48 +278,12 @@ print(mul(a=56,b=8))
 print(div(a=56,b=8))
 
 '''
+import itertools import permutations,combinations
 
-details = {'name':'vyshnavi','ATM PIN':'1234'}
-           
-import random
-remain_=3
-while remain_>0:
-    pin_=input('enter pin number:')
-    if pin_==details['ATM PIN']:
-        otp=random.randint(1000,9999)
-        print(otp)
-        user_otp=int(input('enter user otp: '))
-        if user_otp==otp:
-            otp=int(input('enter option \n1.withdraw \n2.deposite'))
-    else:
-        remain_-=1
-        if remain_>0:
-            print(f' incorrect pin enter and you have{remain_2}')
-        else:
-            print(f'you have entered 3 times incorrect pin')
-        
-    
+data = permutations([1,2,3],2)
+print(list(data))
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+any_ = combinations([1,2,3],2)
+print(list(any_))
 
 
